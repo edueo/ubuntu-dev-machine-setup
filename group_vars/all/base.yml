@@ -64,6 +64,7 @@ base_developer_tools:
   - exa
   - expect
   - filezilla
+  - fish
   - fonts-powerline
   - fzf
   - g++
