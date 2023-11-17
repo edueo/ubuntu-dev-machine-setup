@@ -8,5 +8,6 @@ awesome_packages:
   - arandr
   - copyq
   - awesome
+  - pavucontrol-qt
 
 ...
