@@ -74,7 +74,7 @@ base_developer_tools:
   - git
   - git-extras
   - gitg
-  - golang-go
+  #- golang-go
   - htop
   - httpie
   - inotify-tools
@@ -91,7 +91,7 @@ base_developer_tools:
   - netcat
   - nmap
   - nmon
-  - nodejs
+  #- nodejs
   - pandoc
   - parallel
   - pcre2-utils  # provides pcre2grep and pcre2test (perl-compatible regex)
@@ -124,6 +124,7 @@ base_developer_tools:
   - sshfs
   - sshpass
   - sshuttle
+  - terminator
   - tig
   - tilix
   - tmux
