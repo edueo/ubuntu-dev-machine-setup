@@ -1,0 +1,12 @@
+---
+
+- name: add dbeaver ppa
+  ansible.builtin.apt_repository:
+    repo: "{{dbeaver_ppa}}"
+  
+- name: install latest dbeaver-ce
+  ansible.builtin.apt:
+    name: dbeaver-ce
+    force_apt_get: yes
+
+...
