@@ -1,0 +1,16 @@
+---
+- block:
+  
+  - name: Clone ASDF repo
+    ansible.builtin.git:
+      repo: "{{ asdf_repo }}"
+      dest: "~{{ local_username }}/.asdf"
+      version: v0.13.1
+  - name: Make ASDF available in .bashrc
+    ansible.builtin.lineinfile:
+      path: "~{{ local_username }}/.bashrc"
+      line: "{{ item }}"
+      create: yes
+    with_items: 
+      - . "$HOME/.asdf/asdf.sh"
+      - . "$HOME/.asdf/completions/asdf.bash"
