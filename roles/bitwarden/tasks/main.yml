@@ -1,0 +1,7 @@
+---
+
+- name: install bitwarden via snap
+  ansible.builtin.shell: "snap install bitwarden"
+
+...
+

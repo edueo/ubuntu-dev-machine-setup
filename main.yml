@@ -6,6 +6,7 @@
 - import_playbook: pycharm.yml
 - import_playbook: asdf.yml
 - import_playbook: awesome.yml
+- import_playbook: bitwarden.yml
 #- import_playbook: hashicorp.yml
 #- import_playbook: terminal_customizations.yml
 #- import_playbook: vim.yml
