@@ -1,0 +1,6 @@
+---
+
+- name: install pycharm via snap
+  ansible.builtin.shell: "snap install nvim --classic"
+
+...

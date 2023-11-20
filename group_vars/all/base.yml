@@ -26,6 +26,7 @@ base_system_tools:
   - gufw
   - progress
   - pwgen
+  - gparted
   #- syncthing
 
 base_system_tools_laptop:
@@ -93,6 +94,8 @@ base_developer_tools:
   - netcat
   - nmap
   - nmon
+  - vim
+  - pipx
   #- nodejs
   - pandoc
   - parallel

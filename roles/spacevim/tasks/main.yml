@@ -1,0 +1,27 @@
+---
+- block:
+  
+  - name: Install Spacevim
+    ansible.builtin.shell: >-
+      curl -sLf https://spacevim.org/install.sh | bash
+    become_user: "{{ local_username }}"
+  
+  - name: Install pipx programs
+    community.general.pipx:
+      name: "{{ item }}"
+    with_items: "{{spacevim_pipx}}" 
+  
+  - name: Cria SpaceVim autoload dir
+    ansible.builtin.command: mkdir -p "~{{ local_username }}/.SpaceVim.d/autoload/"
+
+  - name: Download SpaceVim config
+    ansible.builtin.get_url:
+      url: "{{ spacevim_config }}"
+      dest: "~{{ local_username }}/.SpaceVim.d/init.toml"
+      mode: '644'
+  
+  - name: Download SpaceVim autoload config
+    ansible.builtin.get_url:
+      url: "{{ spacevim_autoload_config }}"
+      dest: "~{{ local_username }}/.SpaceVim.d/autoload/myspacevim.vim"
+      mode: '644'

@@ -1,0 +1,8 @@
+---
+spacevim_repo: "https://github.com/asdf-vm/asdf.git"
+spacevim_config: "https://raw.githubusercontent.com/edueo/config/main/spacevim/init.toml"
+spacevim_autoload_config: "https://raw.githubusercontent.com/edueo/config/main/spacevim/autoload/myspacevim.vim"
+spacevim_pipx:
+  - autoflake
+  - coverage
+  - doq

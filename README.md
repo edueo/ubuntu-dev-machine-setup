@@ -105,6 +105,7 @@ And clone this repo (do not clone in `/tmp` as this dir is cleaned and mounted i
 ```bash
 git clone https://github.com/fazlearefin/ubuntu-dev-machine-setup.git
 cd ubuntu-dev-machine-setup
+ansible-galaxy collection install community.general 
 ```
 
 ## Step 1 | Running the playbooks to configure your system
