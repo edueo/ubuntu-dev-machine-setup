@@ -1,2 +1,11 @@
 ---
 asdf_repo: "https://github.com/asdf-vm/asdf.git"
+asdf_plugins:
+   - nodejs
+   - python
+   - golang
+   - php
+   - rust
+   - java
+   - kotlin
+   - ruby

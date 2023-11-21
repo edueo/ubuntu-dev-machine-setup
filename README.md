@@ -98,6 +98,7 @@ You need to install `ansible` and `git` before running the playbooks. You can ei
 ```bash
 /usr/bin/sudo apt update
 /usr/bin/sudo apt install ansible git -y
+git config --global --add safe.directory '/home/usuario/.asdf'
 ```
 
 And clone this repo (do not clone in `/tmp` as this dir is cleaned and mounted in tmpfs)
