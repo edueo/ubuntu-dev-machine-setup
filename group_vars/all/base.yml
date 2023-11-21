@@ -119,6 +119,7 @@ base_developer_tools:
   - rclone
   - recode
   - remmina
+  - remmina-plugin-vnc
   - rename
   - ripgrep  # launch using rg from the cli
   - ruby
