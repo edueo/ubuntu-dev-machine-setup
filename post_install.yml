@@ -5,13 +5,20 @@
       ansible.builtin.apt:
           autoremove: yes
           force_apt_get: yes
-    - name: Autojump activation
+    - name: Autojump activation bash
       ansible.builtin.lineinfile:
         path: "~{{ local_username }}/.bashrc"
         line: "{{ item }}"
         create: yes
       with_items: 
        - . /usr/share/autojump/autojump.sh
+    - name: Autojump activation fish
+      ansible.builtin.lineinfile:
+        path: "~{{ local_username }}/.config/fish/config.fish"
+        line: "{{ item }}"
+        create: yes
+      with_items: 
+       - . /usr/share/autojump/autojump.fish
     - name: display post install message
       debug:
         msg:
