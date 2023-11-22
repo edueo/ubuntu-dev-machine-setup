@@ -1,0 +1,19 @@
+---
+- block:
+  - name: get oh-my-fish repo
+    git:
+      repo: 'https://github.com/oh-my-fish/oh-my-fish.git'
+      dest: "~{{local_username}}/.local/share/git/oh-my-fish"
+    become_user: "{{ local_username }}"
+  - name: install oh-my-fish
+    shell:
+      cmd: "bin/install --offline --noninteractive --yes"
+      executable: /usr/bin/fish
+      chdir: "~{{local_username}}/.local/share/git/oh-my-fish"
+    become_user: "{{ local_username }}"
+  - name: change user's shell to fish
+    ansible.builtin.user:
+      name: "{{ local_username }}"
+      shell: /bin/fish
+
+...

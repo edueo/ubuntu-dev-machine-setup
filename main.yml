@@ -9,6 +9,7 @@
 - import_playbook: bitwarden.yml
 - import_playbook: neovim.yml
 - import_playbook: spacevim.yml
+- import_playbook: ohmyfish.yml
 #- import_playbook: hashicorp.yml
 #- import_playbook: terminal_customizations.yml
 #- import_playbook: vim.yml
