@@ -160,6 +160,7 @@ base_media_tools:
   - totem
 #  - ubuntu-restricted-extras
   - vlc
+  - obs-studio
 
 base_permanent_night_light:
   night_light_enabled: False              # set this to True for permanently turning on night light
