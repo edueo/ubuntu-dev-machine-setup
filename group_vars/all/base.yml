@@ -140,6 +140,7 @@ base_developer_tools:
   - xclip
   - yamllint
   - zeal
+  - git-flow
 
 base_developer_tools_pip3:
   - tldr
