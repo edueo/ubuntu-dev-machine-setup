@@ -1,0 +1,12 @@
+---
+- block:
+  
+  - name: Clone Fzf repo
+    ansible.builtin.git:
+      repo: "{{ fzf_repo }}"
+      dest: "~{{ local_username }}/.fzf"
+      depth: 1
+    become_user: "{{ local_username }}"
+  - name: Run fzf instalation script
+    ansible.builtin.command: "~{{ local_username }}/.fzf/install"
+    become_user: "{{ local_username }}"

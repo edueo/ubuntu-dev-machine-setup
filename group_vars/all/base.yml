@@ -68,7 +68,6 @@ base_developer_tools:
   - filezilla
   - fish
   - fonts-powerline
-  - fzf
   - g++
   - gawk
   - gedit-plugins
