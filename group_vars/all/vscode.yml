@@ -28,5 +28,6 @@ vscode_extensions:
   - danielroedl.meld-diff
   - davidanson.vscode-markdownlint
   - hashicorp.terraform
+  - ms-vscode-remote.remote-containers
 
 ...
