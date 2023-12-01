@@ -1,0 +1,6 @@
+---
+
+- name: install phpstorm via snap
+  ansible.builtin.shell: "snap install phpstorm --classic"
+
+...
