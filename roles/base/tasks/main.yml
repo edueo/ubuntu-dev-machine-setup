@@ -33,9 +33,10 @@
         state: started
         daemon_reload: yes
 
-- name: enable ufw firewall
+# com ufw enable xdebug no vscode não funciona
+- name: disabled ufw firewall
   community.general.ufw:
-    state: enabled
+    state: disabled
 
 - name: disable system crash reports
   ansible.builtin.lineinfile:
