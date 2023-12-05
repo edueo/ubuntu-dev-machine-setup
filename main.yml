@@ -5,6 +5,7 @@
 - import_playbook: vscode.yml
 - import_playbook: pycharm.yml
 - import_playbook: phpstorm.yml
+- import_playbook: insomnia.yml
 - import_playbook: asdf.yml
 - import_playbook: awesome.yml
 - import_playbook: bitwarden.yml

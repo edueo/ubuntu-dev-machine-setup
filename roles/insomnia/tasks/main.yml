@@ -1,0 +1,6 @@
+---
+
+- name: install insomnia via snap
+  ansible.builtin.shell: "snap install insomnia"
+
+...
