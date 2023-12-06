@@ -1,39 +1,19 @@
-# ubuntu-dev-machine-setup | Ubuntu 22.04
+# bu-ubuntu-dev-machine-setup | Ubuntu 22.04
 
-## Description
+## Descrição
 
-This repo contains Ansible playbooks to configure your system as a development machine upon a clean install.
-
-The playbooks should run in Debian based system but was only tested with:
-- **Ubuntu 22.04**
-- **Pop!_OS 22.04**
-
-For other versions of Ubuntu, change to the other branches of this git repo. Other versions include Ubuntu 18.04 LTS and 20.04 LTS.
-
-![bullet-train-zsh-theme](.images/screenshot-bullet-train.png)
-
-Screenshot above is using *bullet-train zsh theme*
-
-![pure-zsh-theme](.images/screenshot-pure.png)
-
-Screenshot above is using *pure zsh theme*
-
-![p10k-zsh-theme-tmux](.images/screenshot-p10k-tmux.png)
-
-Screenshot above is using *p10k zsh theme with tmux*
+Esse projeto é um fork de: https://github.com/fazlearefin/ubuntu-dev-machine-setup, foi customizado para atender o propósito de provisionar máquina de desenvolvedores, a partir de uma instalação limpa do Ubuntu 22.04
 
 ---
 
 ## What gets installed and cofigured?
 
-I am a DevSecOps Engineer (focusing on Linux) and my daily job include working with various config management using Ansible. So if you are in a similar profession the installed system will suit your needs. It is also easy to extend using Ansible roles.
-
-Summary of packages that get installed and configured based on roles:
+Resumo dos pacotes e ferramentas que serão instalados:
 
 - **role: base**
   - mount `/tmp` on tmpfs (reduce SSD read writes and increase SSD lifespan; no leftover files on system shutdown)
   - set default system editor to vim instead of nano
-  - enable ufw firewall and install ufw graphical frontend gufw
+  - disable ufw firewall and install ufw graphical frontend gufw
   - disable system crash reports
   - tune system swappiness so that swapping is greatly reduced
   - upgrade all packages
@@ -48,7 +28,7 @@ Summary of packages that get installed and configured based on roles:
   - install and configure ssh server if not set to `laptop_mode`
   - option to turn on night light settings for eye comfort (set `base_permanent_night_light.night_light_enabled` to `True`)
   - enable `fzf` fuzzy finder in zsh terminal; check out this [YouTube video](https://www.youtube.com/watch?v=1a5NiMhqAR0) to see how to use it
-- **role: hashicorp**
+<!-- - **role: hashicorp**
   - install vagrant, terraform, packer
 - **role: terminal_customizations**
   - download and install some nerd fonts from ryanoasis/nerd-fonts; these are mono fonts ideal for use in terminal or programming editors
@@ -56,36 +36,47 @@ Summary of packages that get installed and configured based on roles:
   - copy and enable sample tmux config file if one does not exist
   - copy and enable sample `~/.tmux.conf` file with powerline status bar and mouse support!
     - open Tilix terminal and run `tmux` command, or enable custom command option in Tilix
-    - edit `~/.tmux.conf` if necessary
-- **role: vim**
-  - install vim packages
-  - install amix/vimrc vim distribution
+    - edit `~/.tmux.conf` if necessary -->
+- **role: spacevim**
+  - install spacevim packages
+  <!-- - install amix/vimrc vim distribution
   - create sample vim customization file in `~/.vim_runtime/my_configs.vim`
-    - additional vim settings are enabled in `~/.vim_runtime/my_configs.vim` which are not part of the Vim Distribution. Edit this file if necessary.
-- **role: zsh**
-  - install zsh package and set user shell to zsh
-  - install antigen zsh plugin manager
+    - additional vim settings are enabled in `~/.vim_runtime/my_configs.vim` which are not part of the Vim Distribution. Edit this file if necessary. -->
+- **role: ohmyfish**
+  - install ohmyfish
+  <!-- - install antigen zsh plugin manager
   - copy and enable sample `~/.zshrc` file if one does not exist
     - contains function to stop ssh-agent from asking for encrypted ssh key password repeatedly when launching new terminal
   - install ohmyzsh/ohmyzsh and enable some bundled plugins
-  - enable bullet train zsh theme (others like p10k can be configured as well)
+  - enable bullet train zsh theme (others like p10k can be configured as well) -->
 - **role: googlechrome**
   - add Google Chrome apt repo
   - install Google Chrome
+- **role: dbeaver**
+  - install Dbeaver
+- **role: phpstorm**
+  - install PHPStorm
+- **role: PyCharm**
+  - install pycharm
+- **role: Insomnia**
+  - install Insomnia http client
+- **role: ASDF**
+- install ASDF
+
 - **role: vscode**
   - add Visual Studio Code apt repo
   - install Visual Studio Code
   - install some popular Visual Studio Code extensions
-- **role: privacy**
+<!-- - **role: privacy**
   - install tor
   - configure tor to run at boot and prevent using certain countries as exit nodes
     - edit `/etc/tor/torrc` if necessary
   - install proxychains
   - configure proxychains to use tor. View [my Medium story](https://fazlearefin.medium.com/tunneling-traffic-over-tor-network-using-proxychains-34c77ec32c0f) to see how to use it
     - edit `/etc/proxychains4.conf` if necessary
-  - install metadata anonymization toolkit
-- **role: security**
-  - install ClamAV (antivirus) and ClamAV GNOME interface. Manual scan from nautilus or from CLI using `clamscan`; clamd not installed for its huge memory footprint
+  - install metadata anonymization toolkit -->
+<!-- - **role: security**
+  - install ClamAV (antivirus) and ClamAV GNOME interface. Manual scan from nautilus or from CLI using `clamscan`; clamd not installed for its huge memory footprint -->
 
 ---
 
@@ -148,9 +139,3 @@ After all is done, give your laptop a new life by rebooting.
 You are more than welcome to send any pull requests. However, the intention of this repo is to suit my development needs. So it might be better if you *fork* this repo instead for your own needs and personalization.
 
 ---
-
-## Donations
-
-If you think my work helped you in some way saving you time and effort, I am happy to receive any amount of donation. However, the code in this repo is completely free; absolutely *no strings attached*.
-
-Bitcoin (BTC): `bc1qzlhpm94vtk2ht67etdutzcy2g5an5v6g36tp0m`
