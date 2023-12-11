@@ -16,6 +16,15 @@
       - . "$HOME/.asdf/asdf.sh"
       - . "$HOME/.asdf/completions/asdf.bash"
     become_user: "{{ local_username }}"
+  - name: Make ASDF available in fish
+    ansible.builtin.lineinfile:
+      path: "~{{ local_username }}/.config/fish/config.fish"
+      line: "{{ item }}"
+      create: yes
+    with_items: 
+      - . "$HOME/.asdf/asdf.fish"
+      - . "$HOME/.asdf/completions/asdf.fish"
+    become_user: "{{ local_username }}"
   - name: Install ASDF plugins
     ansible.builtin.command: asdf plugin add {{ item }}
     with_items: "{{ asdf_plugins }}"
