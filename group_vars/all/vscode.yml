@@ -31,5 +31,6 @@ vscode_extensions:
   - ms-vscode-remote.remote-containers
   - xdebug.php-debug
   - DEVSENSE.phptools-vscode
+  - ms-vscode-remote.remote-ssh
 
 ...
