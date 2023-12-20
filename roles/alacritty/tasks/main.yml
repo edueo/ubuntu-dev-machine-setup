@@ -1,0 +1,6 @@
+---
+
+- name: install alacritty via snap
+  ansible.builtin.shell: "snap install alacritty --classic"
+
+...

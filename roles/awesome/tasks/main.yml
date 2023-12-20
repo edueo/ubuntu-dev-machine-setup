@@ -7,6 +7,16 @@
 - name: Cria awesome config dir
   ansible.builtin.command: mkdir -p ~/.config/awesome/
   become_user: "{{local_username}}"
+- name: Clone awesome-wm-widgets
+  ansible.builtin.git:
+    repo: "https://github.com/streetturtle/awesome-wm-widgets"
+    dest: "~{{ local_username }}/.config/awesome/awesome-wm-widgets"
+  become_user: "{{ local_username }}"
+- name: Clone lain
+  ansible.builtin.git:
+    repo: "https://github.com/lcpz/lain"
+    dest: "~{{ local_username }}/.config/awesome/lain"
+  become_user: "{{ local_username }}"
 - name: Download awesome config
   ansible.builtin.get_url:
     url: 'https://raw.githubusercontent.com/edueo/config/main/rc.lua'
