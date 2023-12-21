@@ -13,6 +13,7 @@
 - import_playbook: spacevim.yml
 - import_playbook: fzf.yml
 - import_playbook: ohmyfish.yml
+- import_playbook: ohmybash.yml
 - import_playbook: alacritty.yml
 #- import_playbook: hashicorp.yml
 #- import_playbook: terminal_customizations.yml
