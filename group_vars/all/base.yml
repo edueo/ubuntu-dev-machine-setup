@@ -73,6 +73,7 @@ base_developer_tools:
   - gedit-plugins
   - geoip-bin
   - ghostwriter
+  - guake
   - git
   - git-extras
   - gitg
