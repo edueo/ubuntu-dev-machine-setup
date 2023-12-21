@@ -17,6 +17,12 @@
     repo: "https://github.com/lcpz/lain"
     dest: "~{{ local_username }}/.config/awesome/lain"
   become_user: "{{ local_username }}"
+- name: Download json.lua
+  ansible.builtin.get_url:
+    url: 'https://raw.githubusercontent.com/rxi/json.lua/master/json.lua'
+    dest: ~/.config/awesome/json.lua
+    mode: '644'
+  become_user: "{{local_username}}"
 - name: Download awesome config
   ansible.builtin.get_url:
     url: 'https://raw.githubusercontent.com/edueo/config/main/rc.lua'
