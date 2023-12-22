@@ -32,5 +32,6 @@ vscode_extensions:
   - xdebug.php-debug
   - DEVSENSE.phptools-vscode
   - ms-vscode-remote.remote-ssh
+  - teabyii.ayu
 
 ...
