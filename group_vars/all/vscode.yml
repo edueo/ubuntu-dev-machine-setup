@@ -33,5 +33,6 @@ vscode_extensions:
   - DEVSENSE.phptools-vscode
   - ms-vscode-remote.remote-ssh
   - teabyii.ayu
+  - bierner.markdown-mermaid
 
 ...
