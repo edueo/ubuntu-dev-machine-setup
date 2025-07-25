@@ -1,8 +1,6 @@
 ---
 - block:
-  - name: Install oh-my-bash
-    ansible.builtin.shell: >-
-      curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh | bash
-    become_user: "{{ local_username }}"
-
+    - name: instala ohmybash via shell script
+      ansible.builtin.shell: "sh scripts/ohmybash.sh"
 ...
+

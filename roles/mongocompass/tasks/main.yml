@@ -1,0 +1,6 @@
+---
+- block:
+    - name: instala mongocompass via shell script
+      ansible.builtin.shell: "sh scripts/mongocompass.sh"
+...
+

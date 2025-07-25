@@ -169,6 +169,7 @@
         state: present
         force_apt_get: yes
 
+<<<<<<< HEAD:roles/base/tasks/main.yml
     # add user to docker group to run docker commands without sudo
     # add user to vboxusers group so that user can attach usb devices to guest OS
     - name: add user to docker and vboxusers groups
@@ -179,6 +180,8 @@
           - docker
           - vboxusers
 
+=======
+>>>>>>> 6b4558e (atualizando):provisionamento/ubuntu/roles/base/tasks/main.yml
 - name: Enable permanent night light settings
   ansible.builtin.command: "gsettings set org.gnome.settings-daemon.plugins.color {{ item.key }} {{ item.value }}"
   loop:

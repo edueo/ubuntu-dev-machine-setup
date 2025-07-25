@@ -18,6 +18,7 @@ base_archiving_tools:
 base_productivity_tools:
   - libreoffice
   - autojump
+  - chromium-browser
 
 base_system_tools:
   - fatrace
@@ -27,6 +28,7 @@ base_system_tools:
   - progress
   - pwgen
   - gparted
+  - neofetch
   #- syncthing
 
 base_system_tools_laptop:
@@ -148,8 +150,6 @@ base_developer_tools_pip3:
 base_virtualization_tools:
   - virtualbox
   - virtualbox-ext-pack
-  - docker.io
-  - docker-compose
 
 base_media_tools:
   - ffmpeg

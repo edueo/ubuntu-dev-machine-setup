@@ -19,6 +19,25 @@
         create: yes
       with_items: 
        - . /usr/share/autojump/autojump.fish
+         # - name: Autojump activation fish
+         #ansible.builtin.lineinfile:
+         #path: "~{{ local_username }}/.config/fish/config.fish"
+         #line: "{{ item }}"
+         # create: yes
+         #with_items: 
+         #- . /usr/share/autojump/autojump.fish
+    # add user to docker group to run docker commands without sudo
+    # add user to vboxusers group so that user can attach usb devices to guest OS
+    - name: add user to docker and vboxusers groups
+      ansible.builtin.user:
+        name: "{{ local_username }}"
+        append: yes
+        groups:
+          - docker
+          - vboxusers
+      become: yes
+      become_user: root
+
     - name: display post install message
       debug:
         msg:

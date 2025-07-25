@@ -1,38 +1,16 @@
 ---
 - block:
-  
-  - name: Clone ASDF repo
-    ansible.builtin.git:
-      repo: "{{ asdf_repo }}"
-      dest: "~{{ local_username }}/.asdf"
-      version: v0.13.1
-    become_user: "{{ local_username }}"
-  - name: Make ASDF available in .bashrc
-    ansible.builtin.lineinfile:
-      path: "~{{ local_username }}/.bashrc"
-      line: "{{ item }}"
-      create: yes
-    with_items: 
-      - . "$HOME/.asdf/asdf.sh"
-      - . "$HOME/.asdf/completions/asdf.bash"
-    become_user: "{{ local_username }}"
-  - name: Make ASDF available in fish
-    ansible.builtin.lineinfile:
-      path: "~{{ local_username }}/.config/fish/config.fish"
-      line: "{{ item }}"
-      create: yes
-    with_items: 
-      - . "$HOME/.asdf/asdf.fish"
-      - . "$HOME/.asdf/completions/asdf.fish"
-    become_user: "{{ local_username }}"
-  - name: Install ASDF plugins
-    ansible.builtin.command: asdf plugin add {{ item }}
-    with_items: "{{ asdf_plugins }}"
-    become_user: "{{ local_username }}"
-  - name: Install lazy docker 
-    ansible.builtin.command: asdf plugin add lazydocker https://github.com/comdotlinux/asdf-lazydocker.git
-    become_user: "{{ local_username }}"
-
-
-
+    - name: instala asdf via shell script 
+      ansible.builtin.shell: "sh scripts/asdf.sh"
+   
+    - name: Initialize asdf in bash
+      ansible.builtin.lineinfile:
+        path: "~{{ local_username }}/.bashrc"
+        line: "{{ item }}"
+        create: yes
+      with_items:
+       - export ASDF_DATA_DIR="/opt/asdf"
+       - export PATH="$ASDF_DATA_DIR/shims:$PATH"
+       - . <(asdf completion bash)
+...
 

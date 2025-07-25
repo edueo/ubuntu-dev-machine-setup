@@ -1,0 +1,9 @@
+---
+
+- name: install intellij-idea-community
+  ansible.builtin.shell: "snap install intellij-idea-community --classic"
+  become: true
+  become_user: root
+
+...
+

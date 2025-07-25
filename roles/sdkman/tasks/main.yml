@@ -1,0 +1,6 @@
+---
+- block:
+    - name: instala sdkman via shell script 
+      ansible.builtin.shell: "sh scripts/sdkman.sh" 
+...
+
