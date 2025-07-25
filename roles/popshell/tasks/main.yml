@@ -1,0 +1,6 @@
+---
+- block:
+    - name: instala popshell via shell script
+      ansible.builtin.shell: "sh scripts/popshell.sh"
+...
+

@@ -45,7 +45,6 @@ base_download_tools:
   - transmission
   - speedtest-cli
   - wget
-  - youtube-dl
 
 base_developer_tools:
   - 2to3
@@ -53,8 +52,9 @@ base_developer_tools:
   - android-tools-fastboot
   - ansible
   - ansible-lint
-  - awscli
   - bat
+  - node-typescript
+  - gnome-shell-extension-prefs
   - bpython
   - black
   - cloc
@@ -65,7 +65,6 @@ base_developer_tools:
   - default-jre-headless
   - dos2unix
   - entr
-  - exa
   - expect
   - filezilla
   - fish
@@ -93,7 +92,6 @@ base_developer_tools:
   - most
   - mssh
   - ncat
-  - netcat
   - nmap
   - nmon
   - vim
@@ -102,7 +100,6 @@ base_developer_tools:
   - pandoc
   - parallel
   - pcre2-utils  # provides pcre2grep and pcre2test (perl-compatible regex)
-  - pep8
   - powerline
   - pry
   - pssh
@@ -114,7 +111,6 @@ base_developer_tools:
   - python3-cachecontrol
   - python3-demjson  # provides jsonlint-py3 for json lint
   - python3-jmespath
-  - python3-pep8
   - python3-pip
   - python3-poetry
   - ranger

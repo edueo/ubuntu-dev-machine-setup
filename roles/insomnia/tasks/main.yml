@@ -2,5 +2,6 @@
 
 - name: install insomnia via snap
   ansible.builtin.shell: "snap install insomnia"
-
+  become: true
+  become_user: root
 ...
